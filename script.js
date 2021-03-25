@@ -23,12 +23,11 @@
 // retrieve values from localstorage and show them
 
 // display current day in header
-var headMoment = moment().format('LLL'); //working
-// console.log(headMoment);
-var currentDay = $("#currentDay").displayTime;
-console.log(currentDay);
+var headMoment = moment().format('LLL'); 
+var currentDay = document.getElementById('currentDay');
+
 function displayTime(){
-    currentDay = headMoment;
+    currentDay.textContent = headMoment;
 };
 
 displayTime();
