@@ -23,12 +23,27 @@
 // retrieve values from localstorage and show them
 
 // display current day in header
-var headMoment = moment().format('LLL'); 
-var currentDay = document.getElementById('currentDay');
+
+var hourSelect = document.querySelectorAll('hour');
+
+
 
 function displayTime(){
+    var headMoment = moment().format('LLL'); 
+    var currentDay = document.getElementById('currentDay');
     currentDay.textContent = headMoment;
 };
 
-displayTime();
+function colorShift(){
+    var currentHour = moment().hour();
+    console.log(currentHour);
 
+    // we need an IF statement to set colors based on the current time
+    if(currentHour <= 8 || currentHour >= 17){
+
+    };
+};
+
+
+displayTime();
+colorShift();
