@@ -34,7 +34,7 @@ var hour14 = $("#hour-14");
 var hour15 = $("#hour-15");
 var hour16 = $("#hour-16");
 var hour17 = $("#hour-17");
-var saveButton = $("#saveBtn");
+var saveButton = $(".saveBtn");
 
 function displayTime(){
     var headMoment = moment().format('LLL'); 
@@ -47,17 +47,27 @@ function colorShift(){
     console.log(currentHour);
 
     // we need an IF statement to set colors based on the current time
-    // if(currentHour <= 8 || currentHour >= 17){
+    if(currentHour <= 8 || currentHour >= 17){
 
-    // };
+    };
 };
 
-// saveButton.on("click", function(event)){
-//     // we need to tie an event to the onclick event for the button
+saveButton.on("click", function(event){
+    // we need to tie an event to the onclick event for the button
+    var getText = $(this).siblings(".description").val();
+    console.log(getText);
+    // get stored text from localstorage
+    // get the parent id we are in when we enter text
+    var getId = $(this).parent().attr("id");
+    // console.log(getId);
+    // we want to set the ID and its content to localstorage
+    localStorage.setItem(getId, getText);
 
-// };
+    // var setLocalStorage = document.localstorage.setItem("saved-text", getText);
+    // console.log(setLocalStorage);
+});
 
 displayTime();
 setInterval(displayTime, 1000);
 
-colorShift();
+// colorShift();
