@@ -25,8 +25,16 @@
 // display current day in header
 
 var hourSelect = document.querySelectorAll('hour');
-
-
+var hour9 = $("#hour-9");
+var hour10 = $("#hour-10");
+var hour11 = $("#hour-11");
+var hour12 = $("#hour-12");
+var hour13 = $("#hour-13");
+var hour14 = $("#hour-14");
+var hour15 = $("#hour-15");
+var hour16 = $("#hour-16");
+var hour17 = $("#hour-17");
+var saveButton = $("#saveBtn");
 
 function displayTime(){
     var headMoment = moment().format('LLL'); 
@@ -39,11 +47,17 @@ function colorShift(){
     console.log(currentHour);
 
     // we need an IF statement to set colors based on the current time
-    if(currentHour <= 8 || currentHour >= 17){
+    // if(currentHour <= 8 || currentHour >= 17){
 
-    };
+    // };
 };
 
+// saveButton.on("click", function(event)){
+//     // we need to tie an event to the onclick event for the button
+
+// };
 
 displayTime();
+setInterval(displayTime, 1000);
+
 colorShift();
