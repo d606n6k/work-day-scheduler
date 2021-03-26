@@ -1,5 +1,5 @@
 var currentTimeHour = moment().format("LT");
-var hourSelect = document.querySelectorAll('hour');
+// var hourSelect = document.querySelectorAll('hour');
 var timeBlock = $(".time-block");
 var saveButton = $(".saveBtn");
 var hourArray = $(".time-block");
