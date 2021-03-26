@@ -1,6 +1,4 @@
 var currentTimeHour = moment().format("LT");
-// var hourSelect = document.querySelectorAll('hour');
-var timeBlock = $(".time-block");
 var saveButton = $(".saveBtn");
 var hourArray = $(".time-block");
 
@@ -36,7 +34,7 @@ function displayLocalStorage(){
         $("#hour-" + hour + " > textarea ").val(getLocalStorage);
         hour++;
     };
-}
+};
 
 displayLocalStorage();
 displayTime();
